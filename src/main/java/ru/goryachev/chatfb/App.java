@@ -15,9 +15,12 @@ public class App extends JFrame implements ActionListener {
     private static final int H = 300;
 
     public static void main(String[] args) {
-
-        new App();
-
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run () {
+                new App();
+            }
+        });
         System.out.println("start application");
     }
 
