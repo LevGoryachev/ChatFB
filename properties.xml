@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
+    <entry key="firebase_admin_sdk_service_key_filename">chatfb-44e21-firebase-adminsdk-7833n-aea5945b36.json</entry>
     <entry key="firebase_db_url">https://chatfb-44e21.firebaseio.com</entry>
-    <entry key="firebase_admin_sdk_service_key_filename">keyfilename</entry>
 </properties>
