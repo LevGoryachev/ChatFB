@@ -8,7 +8,7 @@ public class ChatMessage {
     private long messageTime;
     private String messageText;
 
-    public ChatMessage (String userName, String messageText) {
+    public ChatMessage (String messageText, String userName) {
 
         this.userName = userName;
         this.messageText = messageText;
@@ -17,10 +17,6 @@ public class ChatMessage {
 
     public String getUserName() {
         return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
     }
 
     public long getMessageTime() {
@@ -34,10 +30,4 @@ public class ChatMessage {
     public String getMessageText() {
         return messageText;
     }
-
-    public void setMessageText(String messageText) {
-        this.messageText = messageText;
-    }
-
-
 }
