@@ -17,32 +17,6 @@ public class ChatDataAccess {
     private String username;
     private JLabel labelUsersCounter;
     private JTextPane textPaneMessages;
-
-    public SendMessageHandler getHandler (JTextField textFieldInput, String username){
-        SendMessageHandler sendMessageHandler = new SendMessageHandler(textFieldInput, username);
-        return sendMessageHandler;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public void setLabelUsersCounter(JLabel labelUsersCounter) {
-        this.labelUsersCounter = labelUsersCounter;
-    }
-
-    public void setLocalUserAttributeSet(SimpleAttributeSet localUserAttributeSet) {
-        this.localUserAttributeSet = localUserAttributeSet;
-    }
-
-    public void setOtherUsersAttributeSet(SimpleAttributeSet otherUsersAttributeSet) {
-        this.otherUsersAttributeSet = otherUsersAttributeSet;
-    }
-
-    public void setAuthorAttributeSet(SimpleAttributeSet authorAttributeSet) {
-        this.authorAttributeSet = authorAttributeSet;
-    }
-
     private SimpleAttributeSet localUserAttributeSet;
     private SimpleAttributeSet otherUsersAttributeSet;
     private SimpleAttributeSet authorAttributeSet;
@@ -178,4 +152,34 @@ public class ChatDataAccess {
         DatabaseReference newMessageRef = dbRefMessages.push();
         newMessageRef.setValueAsync(message);
     }
+
+    public SendMessageHandler getHandler (JTextField textFieldInput, String username){
+        SendMessageHandler sendMessageHandler = new SendMessageHandler(textFieldInput, username);
+        return sendMessageHandler;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setLabelUsersCounter(JLabel labelUsersCounter) {
+        this.labelUsersCounter = labelUsersCounter;
+    }
+
+    public void setLocalUserAttributeSet(SimpleAttributeSet localUserAttributeSet) {
+        this.localUserAttributeSet = localUserAttributeSet;
+    }
+
+    public void setOtherUsersAttributeSet(SimpleAttributeSet otherUsersAttributeSet) {
+        this.otherUsersAttributeSet = otherUsersAttributeSet;
+    }
+
+    public void setAuthorAttributeSet(SimpleAttributeSet authorAttributeSet) {
+        this.authorAttributeSet = authorAttributeSet;
+    }
+
+    public JTextPane getTextPaneMessages() {
+        return textPaneMessages;
+    }
+
 }
