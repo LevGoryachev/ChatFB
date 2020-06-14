@@ -36,15 +36,12 @@ public class ChatWindow extends JFrame {
         chatDataAccess.setAuthorAttributeSet(authorAttributeSet);               //GOT TO REDO
         chatDataAccess.setLabelUsersCounter(labelUsersCounter);             //GOT TO REDO
 
-
-
-
         setTitle("ChatFB: " + username);
         setSize(600, 450);
         setLocation(500, 300);
         setVisible(true);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-
+        initAttributeSets();
 
 
         addWindowListener(new WindowAdapter() {
@@ -68,7 +65,6 @@ public class ChatWindow extends JFrame {
         JScrollPane scrollPane = new JScrollPane(textPaneMessages);
         this.textPaneMessages = chatDataAccess.getTextPaneMessages();
 
-
         JPanel panelBottom = new JPanel(new BorderLayout());
 
         textFieldInput = new JTextField();
@@ -91,8 +87,15 @@ public class ChatWindow extends JFrame {
         chatDataAccess.goOnline();
     }
 
+    private void initAttributeSets() {
+        localUserAttributeSet = new SimpleAttributeSet();
+        StyleConstants.setForeground(localUserAttributeSet, Color.CYAN);
 
+        otherUsersAttributeSet = new SimpleAttributeSet();
+        StyleConstants.setForeground(otherUsersAttributeSet, Color.GREEN);
 
-
+        authorAttributeSet = new SimpleAttributeSet();
+        StyleConstants.setBold(authorAttributeSet, true);
+    }
 
 }

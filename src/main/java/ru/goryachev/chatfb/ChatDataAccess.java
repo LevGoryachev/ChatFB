@@ -117,17 +117,6 @@ public class ChatDataAccess {
         labelUsersCounter.setText(String.valueOf(newCounter));
     }
 
-    private void initAttributeSets() {
-        localUserAttributeSet = new SimpleAttributeSet();
-        StyleConstants.setForeground(localUserAttributeSet, Color.CYAN);
-
-        otherUsersAttributeSet = new SimpleAttributeSet();
-        StyleConstants.setForeground(otherUsersAttributeSet, Color.GREEN);
-
-        authorAttributeSet = new SimpleAttributeSet();
-        StyleConstants.setBold(authorAttributeSet, true);
-    }
-
     private class SendMessageHandler implements ActionListener {
 
         private final JTextField textFieldInput;
