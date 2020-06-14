@@ -44,7 +44,7 @@ public class ChatDataAccess {
 
 
 
-    private void setupDBReferences() {
+    public void setupDBReferences() {
         ConnectConfig dbManager = ConnectConfig.getInstance();
 
         dbRefOnlineUsersCounter = dbManager.getDBRef("/session1/onlineUsers");
