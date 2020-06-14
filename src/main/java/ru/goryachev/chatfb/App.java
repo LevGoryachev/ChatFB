@@ -1,9 +1,6 @@
 package ru.goryachev.chatfb;
 
 import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class App extends JFrame {
 
@@ -11,7 +8,10 @@ public class App extends JFrame {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run () {
-                new ChatWindow();
+
+                ChatDataAccess cda = new ChatDataAccess();
+                new ChatWindow("UserName", cda);
+
             }
         });
         System.out.println("start application");
