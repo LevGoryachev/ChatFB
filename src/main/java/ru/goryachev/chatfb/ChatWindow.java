@@ -29,12 +29,11 @@ public class ChatWindow extends JFrame {
 
     private void initComponents() {
 
-        chatDataAccess.setUsername(this.username);          //GOT TO REDO
-        chatDataAccess.setLocalUserAttributeSet(localUserAttributeSet);         //GOT TO REDO
-        chatDataAccess.setOtherUsersAttributeSet(otherUsersAttributeSet);           //GOT TO REDO
-        //       chatDataAccess.setTextPaneMessages(textPaneMessages);                 //GOT TO REDO
-        chatDataAccess.setAuthorAttributeSet(authorAttributeSet);               //GOT TO REDO
-        chatDataAccess.setLabelUsersCounter(labelUsersCounter);             //GOT TO REDO
+        chatDataAccess.setUsername(this.username);
+        chatDataAccess.setLocalUserAttributeSet(localUserAttributeSet);
+        chatDataAccess.setOtherUsersAttributeSet(otherUsersAttributeSet);
+        chatDataAccess.setAuthorAttributeSet(authorAttributeSet);
+        chatDataAccess.setLabelUsersCounter(labelUsersCounter);
 
         setTitle("ChatFB: " + username);
         setSize(600, 450);

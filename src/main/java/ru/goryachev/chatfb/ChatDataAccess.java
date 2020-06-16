@@ -5,9 +5,7 @@ import com.google.firebase.database.*;
 import javax.swing.*;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.SimpleAttributeSet;
-import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
@@ -24,8 +22,6 @@ public class ChatDataAccess {
     private DatabaseReference dbRefOnlineUsersCounter;
     private DatabaseReference dbRefMessages;
 
-
-
     public void goOnline() {
         dbRefOnlineUsersCounter.child(username).setValueAsync(true);
     }
@@ -34,15 +30,9 @@ public class ChatDataAccess {
         dbRefOnlineUsersCounter.child(username).removeValueAsync();
     }
 
-
-
-
-
     private String emptyLine() {
         return "\n\n";
     }
-
-
 
     public void setupDBReferences() {
         ConnectConfig dbManager = ConnectConfig.getInstance();
